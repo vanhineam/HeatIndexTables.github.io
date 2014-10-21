@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Heat Index Table</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="heatindex.js"></script>
+    <style>
+      #table_wrapper {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      td {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+      }
+      .hum {
+        background-color: #66FF99;
+      }
+      .deg {
+        background-color: #33FFCC;
+      }
+      #input_table {
+        border-style: none;
+      }
+      #input_table tr td {
+        border-style: none;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table id="input_table">
+        <tr>
+          <td><label for="min_heat">Minimum Temperature</label></td>
+          <td><input type="text" id="min_temp"></input></td>
+        </tr>
+        <tr>
+          <td><label for="max_hum">Maximum Temperature</label></td>
+          <td><input type="text" id="max_temp"></input></td>
+        </tr>
+        <tr>
+          <td><label for="max_hum">Miniumum Humidity</label></td>
+          <td><input type="text" id="min_hum"></input></td>
+        </tr>
+        <tr>
+          <td><label for="max_hum">Maximum Humidity</label></td>
+          <td><input type="text" id="max_hum"></input></td>
+        </tr>
+        <tr>
+          <td><button type="button" id="create_table" onclick="setValues()">Create Table</button><button type="reset" id="reset_input">Clear</button></td>
+        </tr>
+      </table>
+    </form>
+    <div id="table_wrapper">
+    </div>
+  </body>
+</html>
